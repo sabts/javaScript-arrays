@@ -56,6 +56,7 @@ const securityBoxcode = () =>{
   const secondDigitCode = Math.floor(Math.random()*10);
   const thirdDigitCode = Math.floor(Math.random()*10);
   const fourthDigitCode = Math.floor(Math.random()*10);
+
   const firstAndLastDigitSum = firstDigitCode + fourthDigitCode;
   console.log(`code:[${firstDigitCode},${secondDigitCode},${thirdDigitCode},${fourthDigitCode}]`)
   if(firstAndLastDigitSum % 2 === 0){console.log('Acceso concedido')} else{
@@ -63,3 +64,39 @@ const securityBoxcode = () =>{
   }
 }
 securityBoxcode()
+
+//6️⃣ Camila quiere generar dos números aleatorios entre 1 y 100 y determinar cuál es el mayor. Después los guardará en un array poniendo en la primera posición el mayor y en segunda posición el menor. Si son iguales, imprimirá "Empate", si no, imprimirá el array.
+const numberGreaterThanRandomnize = () => {
+  const randomNumber1 = Math.floor(Math.random()*100)+1;
+  const randomNumber2 = Math.floor(Math.random()*100)+1;
+  const numbers = [randomNumber1, randomNumber2];///tiene que estar vacio? eso no sale en el pdf:'(
+
+  if(randomNumber1>randomNumber2){
+    console.log(`${numbers.unshift(randomNumber1)} ${numbers.push(randomNumber2)}`)
+  } else if (randomNumber1 < randomNumber2){
+    console.log(`${numbers.unshift(randomNumber2)} ${numbers.push(randomNumber1)}`)
+  } else if (randomNumber1 === randomNumber2){
+    console.log('Empate')
+  }
+}
+numberGreaterThanRandomnize()
+
+//7️⃣ Bego está calculando descuentos para varios clientes. Recibe un array con tres precios originales ([120, 75, 40]). Para cada precio, genera un número aleatorio entre 1 y 100. Si el número es menor que 50, aplica un 10% de descuento. Si es mayor o igual a 50, aplica un 20%. Debe imprimir el precio original, el número generado y el precio final con descuento para cada uno.
+//Ejemplo de cómo debería verse el resultado:
+//Precio: 120 | Número generado: 45 | Precio final: 108 (10% de descuento)
+//Precio: 75 | Número generado: 65 | Precio final: 60 (20% de descuento)
+//Precio: 40 | Número generado: 30 | Precio final: 36 (10% de descuento)
+const discountCalculator = () =>{
+  const originalPrices = [120, 75, 40]
+  const randomNumber120 = Math.floor(Math.random()*100)+1;
+  const randomNumber75 = Math.floor(Math.random()*100)+1;
+  const randomNumber40 = Math.floor(Math.random()*100)+1;
+}
+
+
+//8️⃣ Sabrina está en un restaurante con dos amigos. Recibe un array con tres cuentas, por ejemplo: [120, 75, 93]. Cada cuenta debe dividirse entre 3 para pagar de manera justa. Si el resultado de la división es impar, debe redondearse al número par más cercano. Sabrina debe imprimir el precio original, el precio dividido y el precio final (redondeado si es necesario) para cada cuenta.
+//Ejemplo de cómo debería verse el resultado:
+//Cuenta original: 120 | Dividido: 40 | Precio final: 40
+//Cuenta original: 75 | Dividido: 25 | Precio final: 26 (Redondeado al número par más cercano)
+//Cuenta original: 93 | Dividido: 31 | Precio final: 32 (Redondeado al número par más cercano)
+
