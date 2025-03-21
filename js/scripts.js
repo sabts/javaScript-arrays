@@ -91,6 +91,8 @@ const discountCalculator = () =>{
   const randomNumber120 = Math.floor(Math.random()*100)+1;
   const randomNumber75 = Math.floor(Math.random()*100)+1;
   const randomNumber40 = Math.floor(Math.random()*100)+1;
+  //precio original × (porcentaje / 100) = descuento
+  if()
 }
 
 
