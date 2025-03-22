@@ -126,17 +126,17 @@ const discountCalculator = () => {
   const discount1 = randomNumber1 < 50 ? 0.1 :0.2;
   //10% si es < 50, 20% si es >= 50
   //precio original × (porcentaje / 100) = descuento
-  const finalPrice120 = originalPrices[0] - randomNumber1 * discount1;
+  const finalPrice120 = originalPrices[0] - (randomNumber1 * discount1);
   
  // Resultados 75 
  const randomNumber2 = Math.floor(Math.random() * 100) + 1;
  const discount2 = randomNumber2 < 50 ? 0.1 :0.2;
- const finalPrice75 = originalPrices[1] * (randomNumber2 - discount2);
+ const finalPrice75 = originalPrices[1] - (randomNumber2 * discount2);
 
 // Resultados 40
 const randomNumber3 = Math.floor(Math.random() * 100) + 1;
 const discount3 = randomNumber3 < 50 ? 0.1 :0.2;
-const finalPrice40 = originalPrices[2] - randomNumber3 * discount3;
+const finalPrice40 = originalPrices[2] - (randomNumber3 * discount3);
   
   console.log(`Precio: ${originalPrices[0]} 
     | Número generado: ${randomNumber1} 
