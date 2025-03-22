@@ -287,4 +287,18 @@ const clientListPriority = () => {
 }
 clientListPriority()
 
-//1️⃣7️⃣ Bego tiene una caja registradora con pagos pendientes. Ha procesado el primer pago en la lista de pagos y debe eliminarlo: [15.50, 32.75, 8.99]. Luego, debe mostrar cuántos pagos quedan por procesar. (resolver primero la duda del 14)
+//1️⃣7️⃣ Bego tiene una caja registradora con pagos pendientes. Ha procesado el primer pago en la lista de pagos y debe eliminarlo: [15.50, 32.75, 8.99]. Luego, debe mostrar cuántos pagos quedan por procesar. 
+const cashRegisterWithPaymentsPending = () => {
+  const pendingPayments = [15.50, 32.75, 8.99];
+  pendingPayments.shift()
+  console.log(`${pendingPayments[0]} quedan: ${pendingPayments.length} 'pagos por procesar`)
+}
+cashRegisterWithPaymentsPending()
+
+//1️⃣8️⃣ Sabrina está actualizando el menú de su restaurante. Un nuevo plato, "Pasta", ha sido agregado a la lista de platos: ["Sopa", "Carne asada"], y el último ha sido eliminado. Luego, debe mostrar la lista de platos.
+//Nuevo plato (push) 'pasta'
+//y Carne asada, chao (pop)
+//cual es la nueva lista?
+const restaurantMenu = () => {
+  
+}
