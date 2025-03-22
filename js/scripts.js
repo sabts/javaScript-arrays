@@ -157,30 +157,30 @@ discountCalculator()
 //Cuenta original: 120 | Dividido: 40 | Precio final: 40
 //Cuenta original: 75 | Dividido: 25 | Precio final: 26 (Redondeado al número par más cercano)
 //Cuenta original: 93 | Dividido: 31 | Precio final: 32 (Redondeado al número par más cercano)xsxs
-const splitRestaurantBill = (bill) => {
+const splitRestaurantBill = (bills) => {
   // Cuenta n1 //Con este comentario me paso una cosa loca, si colocaba 'para la cuenta 120' y luego cambiaba el valor en el array me daba error en consola...
-  const dividedPrice1 = bill[0] / 3;
+  const dividedPrice1 = bills[0] / 3;
   const finalPrice1 = Math.round(dividedPrice1);
   if (finalPrice1 % 2 !== 0) {finalPrice1 = finalPrice1 + 1}
 
   //Cuenta n2
-  const dividedPrice2 = bill[0] / 3;
+  const dividedPrice2 = bills[0] / 3;
   const finalPrice2 = Math.round(dividedPrice2);
   if (finalPrice2 % 2 !== 0) {finalPrice2= finalPrice1 + 1}
 
   //cuenta n3
-  const dividedPrice3 = bill[0] / 3;
+  const dividedPrice3 = bills[0] / 3;
   const finalPrice3 = Math.round(dividedPrice3);
   if (finalPrice3 % 2 !== 0) {finalPrice3= finalPrice3 + 1}
 
   console.log(
-    `Cuenta original: ${bill[0]} | Dividido: ${dividedPrice1} | Precio final: ${finalPrice1}`
+    `Cuenta original: ${bills[0]} | Dividido: ${dividedPrice1} | Precio final: ${finalPrice1}`
   );
   console.log(
-    `Cuenta original: ${bill[1]} | Dividido: ${dividedPrice2} | Precio final: ${finalPrice2}`
+    `Cuenta original: ${bills[1]} | Dividido: ${dividedPrice2} | Precio final: ${finalPrice2}`
   );
   console.log(
-    `Cuenta original: ${bill[2]} | Dividido: ${dividedPrice3} | Precio final: ${finalPrice3}`
+    `Cuenta original: ${bills[2]} | Dividido: ${dividedPrice3} | Precio final: ${finalPrice3}`
   );
 }
 splitRestaurantBill([120, 75, 93])
