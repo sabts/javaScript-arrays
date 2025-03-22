@@ -300,5 +300,11 @@ cashRegisterWithPaymentsPending()
 //y Carne asada, chao (pop)
 //cual es la nueva lista?
 const restaurantMenu = () => {
-  
+  const menu =  ["Sopa", "Carne asada"];
+  menu.pop("Carne asada")
+  menu.push("Pasta")
+  console.log(menu)
 }
+restaurantMenu() //No puedo poner foto aqui pero en consola se ve con 'comida' y en rojo. esta bien o es un error?
+
+//1️⃣9️⃣ Macarena está organizando un torneo. Un nuevo jugador, "Diego", se ha inscrito y reemplazará al último de la lista de jugadores: ["Hugo", "Mateo", "Álvaro"]. Luego, debe mostrar la cantidad total de jugadores inscritos.
