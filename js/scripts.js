@@ -308,3 +308,24 @@ const restaurantMenu = () => {
 restaurantMenu() //No puedo poner foto aqui pero en consola se ve con 'comida' y en rojo. esta bien o es un error?
 
 //1️⃣9️⃣ Macarena está organizando un torneo. Un nuevo jugador, "Diego", se ha inscrito y reemplazará al último de la lista de jugadores: ["Hugo", "Mateo", "Álvaro"]. Luego, debe mostrar la cantidad total de jugadores inscritos.
+const tournamentPlayersList = () =>{
+  const tournamentPlayersList = ["Hugo", "Mateo", "Álvaro"];
+  tournamentPlayersList.pop()
+  tournamentPlayersList.push("Diego")
+  console.log(tournamentPlayersList)
+}
+tournamentPlayersList()
+
+//2️⃣0️⃣ Abby está recibiendo señales de radio con mensajes en espera. Ha procesado el mensaje más antiguo de la lista: ["Atención, infectados cerca", "Necesitamos refuerzos", "Zona despejada"] y ha recibido uno nuevo: "Solicitamos medicinas". Luego, debe mostrar los mensajes uno por uno en console.log independientes.
+//el array sin cambios: ["Atención, infectados cerca", "Necesitamos refuerzos", "Zona despejada"]
+//se agrega(push):"Solicitamos medicinas"
+//un console.log de cada uno
+const apocalypticRadioSignals = () => {
+  const radioMessages = ["Atención, infectados cerca", "Necesitamos refuerzos", "Zona despejada"];
+  radioMessages.push("Solicitamos medicinas")
+  console.log(radioMessages[0])
+  console.log(radioMessages[1])
+  console.log(radioMessages[2])
+  console.log(radioMessages[3])
+}
+apocalypticRadioSignals()
