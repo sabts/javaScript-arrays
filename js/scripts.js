@@ -29,16 +29,16 @@ const emailVerificationForSales = () => {
     "cliente3@gmail.com",
   ];
   if (
-    emailList[0].includes("cliente1") ||
-    emailList[1].includes("cliente2") ||
-    emailList[2].includes("cliente3")
+    emailList[0].includes("@gmail.com") ||
+    emailList[1].includes("@hotmail.com") ||
+    emailList[2].includes("@gmail.com")
   ) {
     console.log("Correo de email encontrado");
   } else {
     console.log("No hay correos de email");
   }
 };
-emailVerificationForSales("cliente1");
+emailVerificationForSales("@gmail.com");
 
 //4️⃣ Macarena necesita generar un identificador único para cada usuario. Recibe un array con nombre y apellido, (por ejemplo: ['Enrique Sofresco', 'Esther Colero', 'Leandro Gado']) y debe imprimir las dos primeras letras de cada nombre y de cada apellido en mayúsculas, seguidas de un número aleatorio entre 10 y 99.
 const extractFirstTwoLetter = name => {
@@ -131,7 +131,7 @@ const discountCalculator = () => {
  // Resultados 75 
  const randomNumber2 = Math.floor(Math.random() * 100) + 1;
  const discount2 = randomNumber2 < 50 ? 0.1 :0.2;
- const finalPrice75 = originalPrices[1] - randomNumber2 * discount2;
+ const finalPrice75 = originalPrices[1] * (randomNumber2 - discount2);
 
 // Resultados 40
 const randomNumber3 = Math.floor(Math.random() * 100) + 1;
@@ -160,17 +160,17 @@ discountCalculator()
 const splitRestaurantBill = (bills) => {
   // Cuenta n1 //Con este comentario me paso una cosa loca, si colocaba 'para la cuenta 120' y luego cambiaba el valor en el array me daba error en consola...
   const dividedPrice1 = bills[0] / 3;
-  const finalPrice1 = Math.round(dividedPrice1);
+  let finalPrice1 = Math.round(dividedPrice1);
   if (finalPrice1 % 2 !== 0) {finalPrice1 = finalPrice1 + 1}
 
   //Cuenta n2
   const dividedPrice2 = bills[0] / 3;
-  const finalPrice2 = Math.round(dividedPrice2);
+  let finalPrice2 = Math.round(dividedPrice2);
   if (finalPrice2 % 2 !== 0) {finalPrice2= finalPrice1 + 1}
 
   //cuenta n3
   const dividedPrice3 = bills[0] / 3;
-  const finalPrice3 = Math.round(dividedPrice3);
+  let finalPrice3 = Math.round(dividedPrice3);
   if (finalPrice3 % 2 !== 0) {finalPrice3= finalPrice3 + 1}
 
   console.log(
@@ -237,7 +237,7 @@ const securityCodethreedigits = () =>{
   //ahora cuantos productos tiene que comparar?
   const superMarketList = () =>{
     const marketlist = ["Pan", "Leche", "Huevos"];
-    marketlist.shift(1)
+    marketlist.shift()
     console.log(marketlist.length)
   }
   superMarketList()
@@ -257,7 +257,7 @@ const securityCodethreedigits = () =>{
   //cuantas reservas quedan? reservation limit= 3 //aqui te refieres a que queda una plaza disponible para reservas o que quedan 2?
   const hotelRoomReservations = () => {
     const reservedRooms = ["Habitación 101", "Habitación 203", "Habitación 305"];
-    reservedRooms.shift(0)
+    reservedRooms.shift()
     {
       console.log(`Quedan ${reservedRooms.length} resevas`)
     }
@@ -301,7 +301,7 @@ cashRegisterWithPaymentsPending()
 //cual es la nueva lista?
 const restaurantMenu = () => {
   const menu =  ["Sopa", "Carne asada"];
-  menu.pop("Carne asada")
+  menu.pop()
   menu.push("Pasta")
   console.log(menu)
 }
