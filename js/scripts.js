@@ -244,4 +244,47 @@ const securityCodethreedigits = () =>{
 
   //1️⃣3️⃣ Sabrina está registrando pedidos en un restaurante. Un nuevo pedido, "Pizza", ha sido añadido en primer lugar a la lista de pedidos: ["Hamburguesa", "Ensalada"]. Luego, debe imprimir el primer pedido en la lista.
   //Nuevo producto al comienzo del array (unshift)
-  //
+  //mostrar el primer porducto de la lista
+  const restaurantOrder = () => {
+    const foodOrder =  ["Hamburguesa", "Ensalada"];
+    foodOrder.unshift('Pizza')
+    console.log(foodOrder[0])
+  }
+  restaurantOrder()
+
+  //1️⃣4️⃣ Macarena está revisando las reservas de su hotel. Un cliente canceló su reserva en la lista: ["Habitación 101", "Habitación 203", "Habitación 305"]. Luego, debe mostrar cuántas reservas quedan.
+  //eliminar una habitación del array (pop)
+  //cuantas reservas quedan? reservation limit= 3 //aqui te refieres a que queda una plaza disponible para reservas o que quedan 2?
+  const hotelRoomReservations = () => {
+    const reservedRooms = ["Habitación 101", "Habitación 203", "Habitación 305"];
+    reservedRooms.shift(0)
+    {
+      console.log(`Quedan ${reservedRooms.length} resevas`)
+    }
+  }
+  hotelRoomReservations()
+
+  //1️⃣5️⃣ Abby encontró una lista de suministros en un refugio, por ejemplo: ["Botiquín", "Munición", "Agua", "Comida"]. Necesita asegurarse de que hay "Munición" y "Comida" disponibles. Si ambos están en la lista, debe mostrar "Suministros completos". Si falta alguno, debe mostrar "Suministros incompletos".
+  //lista encontrada: "Botiquín", "Munición", "Agua", "Comida"
+  //prioridades de abby: Munición" y "Comida
+  //estan en la lista? includes('')
+  //si la respuesta es si: Suministros completos"
+  //en caso de ser negativa: Suministros incompletos
+  const supplyList = (list) => {
+    if(list.includes("Comida") && list.includes("Munición")) {
+      console.log("Suministros completos")
+    } else {
+      console.log("Suministros incompletos")
+    }
+  }
+  supplyList(["Botiquín", "Munición", "Agua", "Comida"])
+
+//1️⃣6️⃣ Camila está organizando una lista de espera. Un cliente importante, "Fernando", debe ser colocado en la primera posición de la lista: ["Ana", "Luis", "Elena"]. Luego, debe mostrar quién es el último en la lista.
+const clientListPriority = () => {
+  const clienList = ["Ana", "Luis", "Elena"];
+  clienList.unshift("Fernando")
+  console.log(clienList[0], clienList[clienList.length-1])
+}
+clientListPriority()
+
+//1️⃣7️⃣ Bego tiene una caja registradora con pagos pendientes. Ha procesado el primer pago en la lista de pagos y debe eliminarlo: [15.50, 32.75, 8.99]. Luego, debe mostrar cuántos pagos quedan por procesar. (resolver primero la duda del 14)
