@@ -204,4 +204,44 @@ ageCalculator([2009,2010,2008])
 
 //🔟 Abby encontró un código de seguridad con tres números entre 100 y 999. Si el primer número es mayor que el segundo pero menor que el tercero, imprimirá "Código válido", si no, "Código incorrecto".
 //3 números
-//
+//entre 100 y 999
+//si el primero es > que el segundo
+//y el primero es < que el tercero =Código válido
+//si no=Código incorrecto
+//usar indexof para sumar el 1ero y el último
+const securityCodethreedigits = () =>{
+  const codeNumber1 = Math.floor(Math.random() * 10);
+  const codeNumber2 = Math.floor(Math.random() * 10);
+  const codeNumber3 = Math.floor(Math.random() * 10);
+
+  if(codeNumber1 > codeNumber2 && codeNumber1 < codeNumber3) {
+    console.log('Código válido')
+  } else {
+    console.log('Código incorrecto')
+  }
+  }
+  securityCodethreedigits()
+
+  //1️⃣1️⃣ Camila está organizando la lista de clientes de su tienda. Un cliente nuevo, "Lucía", llega y debe agregarse al final de la lista de clientes: ["Carlos", "María", "Sofía"]. Luego, debe mostrar cuántos clientes hay en la lista.
+  //1 cliente nuevo (push)
+  //contar cuantos hay
+  const storeClientsList = () => {
+    const actualClientsList = ["Carlos", "María", "Sofía"];
+    actualClientsList.push('Lucia')
+    console.log(actualClientsList.length)
+  }
+  storeClientsList()
+
+  //1️⃣2️⃣ Bego está revisando el stock de su tienda. Un producto aleatorio ya no está disponible y debe ser eliminado de la lista: ["Pan", "Leche", "Huevos"]. Después, debe mostrar cuántos productos quedan.
+  //Se puede ir(eliminar) cualquiera de los arrays
+  //ahora cuantos productos tiene que comparar?
+  const superMarketList = () =>{
+    const marketlist = ["Pan", "Leche", "Huevos"];
+    marketlist.shift(1)
+    console.log(marketlist.length)
+  }
+  superMarketList()
+
+  //1️⃣3️⃣ Sabrina está registrando pedidos en un restaurante. Un nuevo pedido, "Pizza", ha sido añadido en primer lugar a la lista de pedidos: ["Hamburguesa", "Ensalada"]. Luego, debe imprimir el primer pedido en la lista.
+  //Nuevo producto al comienzo del array (unshift)
+  //
