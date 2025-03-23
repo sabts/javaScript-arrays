@@ -1,14 +1,16 @@
 //1️⃣ Camila está organizando la lista de asistentes para una conferencia. Tiene un array con nombres, por ejemplo: ["Pedro", "Ana", "Sofía", "Luis"]. Quiere saber si "Ana" está en la lista y, si es así, debe imprimir "Invitada confirmada en la posición X". Si no está, debe imprimir "Invitada no encontrada".
 const listOrganizerForAConference = name => {
   const names = ["Pedro", "Ana", "Sofía", "Luis"];
+  const Position = names.indexOf(name);
   if (names.includes(name)) {
-    console.log(`${name} Invitado(a) encontrada`);
+    console.log(`${name} Invitado(a) encontrada en la posición ${Position} `);
   } else {
     console.log("Invitado no encontrado");
   }
 };
 
-listOrganizerForAConference("jhgjgj");
+listOrganizerForAConference("jhgjgj")
+listOrganizerForAConference("Sofía");
 
 //2️⃣ Bego está buscando un producto específico en su tienda. La lista de productos es: ["Camiseta", "Pantalón", "Gorra", "Zapatos"]. Necesita saber en qué posición se encuentra "Gorra". Si lo encuentra, debe mostrar su posición. Si no lo encuentra, debe mostrar "Producto no disponible".
 const storeProductList = product => {
@@ -29,16 +31,14 @@ const emailVerificationForSales = () => {
     "cliente3@gmail.com",
   ];
   if (
-    emailList[0].includes("@gmail.com") ||
-    emailList[1].includes("@hotmail.com") ||
-    emailList[2].includes("@gmail.com")
+    emailList.includes("@gmail.com")
   ) {
-    console.log("Correo de email encontrado");
+    console.log("Correo de gemail encontrado");
   } else {
     console.log("No hay correos de email");
   }
 };
-emailVerificationForSales("@gmail.com");
+emailVerificationForSales("@hmail.com");
 
 //4️⃣ Macarena necesita generar un identificador único para cada usuario. Recibe un array con nombre y apellido, (por ejemplo: ['Enrique Sofresco', 'Esther Colero', 'Leandro Gado']) y debe imprimir las dos primeras letras de cada nombre y de cada apellido en mayúsculas, seguidas de un número aleatorio entre 10 y 99.
 const extractFirstTwoLetter = name => {
@@ -126,7 +126,7 @@ const discountCalculator = () => {
   const discount1 = randomNumber1 < 50 ? 0.1 :0.2;
   //10% si es < 50, 20% si es >= 50
   //precio original × (porcentaje / 100) = descuento
-  const finalPrice120 = originalPrices[0] - (randomNumber1 * discount1);
+  const finalPrice120 = originalPrices[0] * discount1;
   
  // Resultados 75 
  const randomNumber2 = Math.floor(Math.random() * 100) + 1;
