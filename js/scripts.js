@@ -38,7 +38,7 @@ const emailVerificationForSales = () => {
     console.log("No hay correos de email");
   }
 };
-emailVerificationForSales("@hmail.com");
+emailVerificationForSales("@mail.com");
 
 //4️⃣ Macarena necesita generar un identificador único para cada usuario. Recibe un array con nombre y apellido, (por ejemplo: ['Enrique Sofresco', 'Esther Colero', 'Leandro Gado']) y debe imprimir las dos primeras letras de cada nombre y de cada apellido en mayúsculas, seguidas de un número aleatorio entre 10 y 99.
 const extractFirstTwoLetter = name => {
@@ -126,7 +126,7 @@ const discountCalculator = () => {
   const discount1 = randomNumber1 < 50 ? 0.1 :0.2;
   //10% si es < 50, 20% si es >= 50
   //precio original × (porcentaje / 100) = descuento
-  const finalPrice120 = originalPrices[0] * discount1;
+  const finalPrice120 = originalPrices[0] - (randomNumber1 * discount1);
   
  // Resultados 75 
  const randomNumber2 = Math.floor(Math.random() * 100) + 1;
@@ -140,15 +140,15 @@ const finalPrice40 = originalPrices[2] - (randomNumber3 * discount3);
   
   console.log(`Precio: ${originalPrices[0]} 
     | Número generado: ${randomNumber1} 
-    | Precio final: ${finalPrice120} 10% de descuento`)
+    | Precio final: ${finalPrice120} (${discount1 * 100}% de descuento)`)
    
   console.log(`Precio: ${originalPrices[1]} 
     | Número generado: ${randomNumber2} 
-    | Precio final: ${finalPrice75} 10% de descuento`) 
+    | Precio final: ${finalPrice75} (${discount2 * 100}% de descuento)o`) 
     
     console.log(`Precio: ${originalPrices[2]} 
     | Número generado: ${randomNumber3} 
-    | Precio final: ${finalPrice40} 10% de descuento`)
+    | Precio final: ${finalPrice40} (${discount3 * 100}% de descuento)`)
 };
 discountCalculator()
 
@@ -164,23 +164,23 @@ const splitRestaurantBill = (bills) => {
   if (finalPrice1 % 2 !== 0) {finalPrice1 = finalPrice1 + 1}
 
   //Cuenta n2
-  const dividedPrice2 = bills[0] / 3;
+  const dividedPrice2 = bills[1] / 3;
   let finalPrice2 = Math.round(dividedPrice2);
   if (finalPrice2 % 2 !== 0) {finalPrice2= finalPrice1 + 1}
 
   //cuenta n3
-  const dividedPrice3 = bills[0] / 3;
+  const dividedPrice3 = bills[2] / 3;
   let finalPrice3 = Math.round(dividedPrice3);
   if (finalPrice3 % 2 !== 0) {finalPrice3= finalPrice3 + 1}
 
   console.log(
-    `Cuenta original: ${bills[0]} | Dividido: ${dividedPrice1} | Precio final: ${finalPrice1}`
+    `Cuenta original: ${bills[0]} | Dividido: ${dividedPrice1} | Precio final: ${finalPrice1} Redondeado al número par más cercano) `
   );
   console.log(
-    `Cuenta original: ${bills[1]} | Dividido: ${dividedPrice2} | Precio final: ${finalPrice2}`
+    `Cuenta original: ${bills[1]} | Dividido: ${dividedPrice2} | Precio final: ${finalPrice2} Redondeado al número par más cercano)`
   );
   console.log(
-    `Cuenta original: ${bills[2]} | Dividido: ${dividedPrice3} | Precio final: ${finalPrice3}`
+    `Cuenta original: ${bills[2]} | Dividido: ${dividedPrice3} | Precio final: ${finalPrice3} Redondeado al número par más cercano)`
   );
 }
 splitRestaurantBill([120, 75, 93])
@@ -215,9 +215,11 @@ const securityCodethreedigits = () =>{
   const codeNumber3 = Math.floor(Math.random() * 10);
 
   if(codeNumber1 > codeNumber2 && codeNumber1 < codeNumber3) {
-    console.log('Código válido')
+    console.log(`${codeNumber1} ${codeNumber2}${codeNumber3}
+      Código válido`)
   } else {
-    console.log('Código incorrecto')
+    console.log(`${codeNumber1} ${codeNumber2}${codeNumber3}
+      Código incorrecto`)
   }
   }
   securityCodethreedigits()
@@ -228,7 +230,7 @@ const securityCodethreedigits = () =>{
   const storeClientsList = () => {
     const actualClientsList = ["Carlos", "María", "Sofía"];
     actualClientsList.push('Lucia')
-    console.log(actualClientsList.length)
+    console.log(`Quedan ${actualClientsList.length} en la lista: ${actualClientsList}`)
   }
   storeClientsList()
 
@@ -291,7 +293,7 @@ clientListPriority()
 const cashRegisterWithPaymentsPending = () => {
   const pendingPayments = [15.50, 32.75, 8.99];
   pendingPayments.shift()
-  console.log(`${pendingPayments[0]} quedan: ${pendingPayments.length} 'pagos por procesar`)
+  console.log(`Quedan ${pendingPayments.length} 'pagos por procesar: ${pendingPayments} `)
 }
 cashRegisterWithPaymentsPending()
 
