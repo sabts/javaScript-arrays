@@ -215,10 +215,10 @@ const securityCodethreedigits = () =>{
   const codeNumber3 = Math.floor(Math.random() * 10);
 
   if(codeNumber1 > codeNumber2 && codeNumber1 < codeNumber3) {
-    console.log(`${codeNumber1} ${codeNumber2}${codeNumber3}
+    console.log(`${codeNumber1}${codeNumber2}${codeNumber3}
       Código válido`)
   } else {
-    console.log(`${codeNumber1} ${codeNumber2}${codeNumber3}
+    console.log(`${codeNumber1}${codeNumber2}${codeNumber3}
       Código incorrecto`)
   }
   }
